@@ -51,9 +51,5 @@ app.use('/session', require('./routes/auth'))
 app.use('/inner-text', require('./routes/innerText'));
 app.use('/contact', require('./routes/contact'));
 
-app.use((req, res, next) => {
-  // If no routes match, send them the React HTML.
-  res.sendFile(__dirname + "/public/index.html");
-});
 
 module.exports = app;
